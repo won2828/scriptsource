@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // q1) 두 개의 숫자를 받아서 빼는 결과를 리턴하는 함수 작성
+      //     function 키워드 사용
+      let a = Number(prompt("첫번째 숫자 a 입력"));
+      let b = Number(prompt("두번째 숫자 b 입력"));
+      function minus(a, b) {
+        return a - b;
+      }
+      console.log("a - b = ", minus(a, b));
+
+      // q2) q1 에서 작성했던 함수를 함수 표현식으로 변경하기
+      const minus1 = function (a, b) {
+        return a - b;
+      };
+      console.log("a - b = ", minus1(a, b));
+
+      // q3) q2 에서 작성했던 함수를 화살표 함수로 변경하기
+      const minus2 = (a, b) => {
+        return a - b;
+      };
+      console.log("a - b = ", minus2(a, b));
+
+      // q4) 한개의 숫자를 인자로 받아 그 숫자가 3의 배수인지 확인하는 함수 작성
+      //     3의 배수라면 화면에 "박수" 라는 글자 출력 / 아니라면 "통과" 출력
+      let trd = Number(
+        prompt("3의 배수인지 확인하고 싶은 숫자를 입력하세요 : ")
+      );
+
+      if (trd % 3 == 0) {
+        console.log("박수");
+      } else console.log("통과");
+
+      // q5) q4 를 개선하여 3의 배수인 경우 "박수", 9의 배수인 경우 "박수x2", 나머지 "통과"
+      if (trd % 9 == 0) {
+        console.log("박수x2");
+      } else if (trd % 3 == 0) {
+        console.log("박수");
+      } else console.log("통과");
+
+      // q6) 시험 점수를 입력하면 결과를 알려주는 함수 작성
+      //     두과목을 합해서 120점 이상이면 합격, 단 한 과목이 40점 미만이면 과락으로 불합격
+      let fst = Number(prompt("첫번째 과목 점수 입력"));
+      let snd = Number(prompt("두번째 과목 점수 입력"));
+
+      if (fst + snd >= 120) {
+        if (fst < 40 || snd < 40) {
+          console.log("과락");
+        } else console.log("합격");
+      } else console.log("불합격");
+
+      // q7) 3의 배수에서 박수를 치는게 아니라 끝자리가 3,6,9로 끝나는 숫자라면 "박수" 출력
+      let trd2 = Number(
+        prompt("끝자리가 3,6,9로 끝나는지 확인하고 싶은 숫자를 입력하세요 : ")
+      );
+
+      if (trd2 % 10 == 3 || trd2 % 10 == 6 || trd2 % 10 == 9) {
+        console.log("박수");
+      } else console.log("통과");
+    </script>
+  </body>
+</html>
