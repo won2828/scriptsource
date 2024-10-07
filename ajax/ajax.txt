@@ -1,2 +1,0 @@
-// 1007
-Ajax(Asynchronous Javascript and XML)
